@@ -5,6 +5,9 @@
 		System.out.println("Introduce Numero de segundos ");
 		//segundosDados=lector.nextInt();
 		segundosDados=Integer.parseInt(lector.nextLine());//el profe prefier con nextline parseado
+		lector.close();
+		
+		
 		segundos=segundosDados;
 		/*
 		minutos=segundosDados/60;
@@ -34,7 +37,7 @@
 		System.out.println("4-DIAS  "+dias);
 	System.out.println("********************");
 		
-Scanner.close();
+
 	}
 	
 }
