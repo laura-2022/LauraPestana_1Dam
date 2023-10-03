@@ -6,16 +6,21 @@ es mayor, menor o igual que el segundo
 */
 import java.util.Scanner;
 
-public class Impares {
+public class MenorMayor{
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
+		int num1;
+		int num2;
+		String op;
+		
 
         System.out.println("Dime primer numero ");
-        int num1 = Integer.parseInt(lector.nextLine());
+        num1 = Integer.parseInt(lector.nextLine());
         System.out.println("Dame segundo numero");
-        int num2 = Integer.parseInt(lector.nextLine());
+        num2 = Integer.parseInt(lector.nextLine());
 
-        String op;
+lector.close(); // cierro scanner
+      
 
         if (num1 == num2) {
             op = "igual";
@@ -25,7 +30,7 @@ public class Impares {
             op = "mayor";
         }
 
-        lector.close(); // cierro scanner
+        
 
         System.out.println("el primer numero " + num1 + " es " + op + " al segundo numero ingresado");
     }
