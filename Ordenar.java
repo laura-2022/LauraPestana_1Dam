@@ -9,13 +9,13 @@ import java.util.Scanner;
 public class Ordenar {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
-		int num1;
-		int num2;
+		double num1;
+		double num2;
 
       System.out.println("Dime el primer numero ");
-        num1 = Integer.parseInt(lector.nextLine());
+        num1 = Double.parseDouble(lector.nextLine());
               System.out.println("Dime el segundo numero ");
-        num2 = Integer.parseInt(lector.nextLine());
+        num2 = Double.parseDouble(lector.nextLine());
         
 
         lector.close(); // cierro scanner
