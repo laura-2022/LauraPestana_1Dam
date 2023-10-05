@@ -49,7 +49,7 @@ public class Club{
 					}
 	
 			   }else{
-				   					System.out.println("Si tienes "+edad+"años,no tienes descuento. Y el total de importe es  "+cuota);
+				   					System.out.println("Si tienes "+edad+"años,no tienes descuento. Y el total de importe es  "+cuota+"€");
 
 			   }
 		
