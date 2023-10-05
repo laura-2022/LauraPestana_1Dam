@@ -32,7 +32,7 @@ public class Club{
 				System.out.println("Si tienes "+edad+"años, tu descuento es 50% y el total en euros es :"+descuento50);
 
 				   
-			   }else if(edad<18){
+			   }else if(edad<=18){
 					
 					System.out.println("Dime si tu padre es socio (false /true)");
 					padreSocio=lector.nextBoolean();// pido edad
@@ -41,15 +41,15 @@ public class Club{
 					
 					if(padreSocio==true){
 			
-				    System.out.println("Si tienes "+edad+"años, tienes padres socios y tu descuento es  35 y el total en euros es :"+descuento35);
+				    System.out.println("Si tienes "+edad+"años, tienes padres socios y tu descuento es  35 y el total en euros es :"+Math.round(descuento35)+"€");
 
 					}else{
-					System.out.println("Si tienes "+edad+"años,no tienes padres socios y tu descuento es 25 y el total en euros es ::"+descuento25);
+					System.out.println("Si tienes "+edad+"años,no tienes padres socios y tu descuento es 25 y el total en euros es ::"+Math.round(descuento25)+"€");
 
 					}
 	
 			   }else{
-				   					System.out.println("Si tienes "+edad+"años,no tienes descuento ");
+				   					System.out.println("Si tienes "+edad+"años,no tienes descuento. Y el total de importe es  "+cuota);
 
 			   }
 		
