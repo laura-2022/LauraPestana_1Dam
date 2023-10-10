@@ -14,10 +14,14 @@ public class Bucle7{
        System.out.println("Dime numero b (entero negativo)");
        b=Integer.parseInt(lector.nextLine());// leo como entero
 		
+		if (b < 0) {
+            // Si el exponente es negativo, calculamos el inverso de 'a' y cambiamos el signo de 'b'.
+            a = 1 / a;
+            b = -b;
+        }
 
-for (int i = 0; i < b; i++) {
+		for (int i = 0; i < b; i++) {
              resultado =resultado* a; // Multiplicar 'a' por sí mismo 'b' veces
-			         System.out.println(a + " elevado a la potencia " + b + " es igual a " + resultado);
 
         }
 
