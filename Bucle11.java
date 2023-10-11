@@ -6,14 +6,14 @@ public class Bucle11{
        
           Scanner lector = new Scanner(System.in);
 
-        int numero;
-        int suma = 0;
+        double numero;
+       double suma = 0;
         int contador = 0;
 
         System.out.println("Ingrese números enteros. Ingrese un número negativo para calcular la media.");
 
         while (true) {
-            numero = lalumnlector.nextInt();
+            numero = Double.parseDouble(lector.nextLine());
 
             if (numero < 0) {
                 break; // Salir del bucle si se ingresa un número negativo
