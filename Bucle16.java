@@ -62,11 +62,11 @@ caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más 
                                 dadoOrdenador = random.nextInt(6) + 1;
                                 sumaOrdenador += dadoOrdenador;
                             }
-                            if (sumaOrdenador == 11) {
+                            if (sumaOrdenador >= sumaUsuario) {
                                 System.out.println("El ordenador ha ganado");
                                 porrasOrdenador++;
-                            } else if (sumaOrdenador > 11) {
-                                System.out.println("El ordenador se ha pasado. Has ganado");
+                            } else {
+                                System.out.println("Has ganado esta ronda");
                                 porrasUsuario++;
                             }
                         }
@@ -79,11 +79,11 @@ caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más 
                         dadoOrdenador = random.nextInt(6) + 1;
                         sumaOrdenador += dadoOrdenador;
                     }
-                    if (sumaOrdenador == 11) {
+                    if (sumaOrdenador >= sumaUsuario) {
                         System.out.println("El ordenador ha ganado");
                         porrasOrdenador++;
-                    } else if (sumaOrdenador > 11) {
-                        System.out.println("El ordenador se ha pasado. Has ganado");
+                    } else {
+                        System.out.println("Has ganado esta ronda");
                         porrasUsuario++;
                     }
                     break;
@@ -94,7 +94,7 @@ caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más 
 
         if (porrasUsuario >= 5) {
             System.out.println("¡Felicidades! Has ganado el juego.");
-        } else if (porrasOrdenador >= porrasUsuario) {
+        } else if (porrasOrdenador >= 5) {
             System.out.println("El ordenador te ha ganado. Mejor suerte la próxima vez.");
         }
     }
