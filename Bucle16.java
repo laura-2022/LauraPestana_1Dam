@@ -22,6 +22,7 @@ public class Bucle16{
 caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más puntos que el rival
 (en este caso el ordenador) sin pasarse de 11 puntos*/
 
+
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         Random random = new Random();
@@ -31,7 +32,6 @@ caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más 
         int sumaUsuario = 0;
         int porrasUsuario = 0;
         int porrasOrdenador = 0;
-        char respuesta;
 
         // El juego continúa mientras ningún jugador llegue a 5 porras.
         while (porrasUsuario < 5 && porrasOrdenador < 5) {
@@ -52,24 +52,13 @@ caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más 
                         porrasUsuario++;
                     } else if (sumaUsuario > 11) {
                         System.out.println("Has perdido");
+						while (sumaOrdenador < 11 && sumaOrdenador <= sumaUsuario) {
+                        dadoOrdenador = random.nextInt(6) + 1;
+                        System.out.println("Tirada del ordenador: " + dadoOrdenador);
+                        sumaOrdenador += dadoOrdenador;
+                        System.out.println("El total de la jugada del ordenador es: " + sumaOrdenador);
+                    }
                         porrasOrdenador++;
-                    } else {
-                        System.out.println("¿Deseas tirar de nuevo? (S/N)");
-                        respuesta = lector.next().charAt(0);
-                        if (respuesta == 'N' || respuesta == 'n') {
-                            // Turno del ordenador
-                            while (sumaOrdenador < 11 && sumaOrdenador <= sumaUsuario) {
-                                dadoOrdenador = random.nextInt(6) + 1;
-                                sumaOrdenador += dadoOrdenador;
-                            }
-                            if (sumaOrdenador >= sumaUsuario) {
-                                System.out.println("El ordenador ha ganado");
-                                porrasOrdenador++;
-                            } else {
-                                System.out.println("Has ganado esta ronda");
-                                porrasUsuario++;
-                            }
-                        }
                     }
                     break;
                 case 2:
@@ -77,15 +66,23 @@ caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más 
                     // Turno del ordenador
                     while (sumaOrdenador < 11 && sumaOrdenador <= sumaUsuario) {
                         dadoOrdenador = random.nextInt(6) + 1;
+                        System.out.println("Tirada del ordenador: " + dadoOrdenador);
                         sumaOrdenador += dadoOrdenador;
+                        System.out.println("El total de la jugada del ordenador es: " + sumaOrdenador);
                     }
-                    if (sumaOrdenador >= sumaUsuario) {
+                    if (sumaOrdenador == 11) {
                         System.out.println("El ordenador ha ganado");
                         porrasOrdenador++;
-                    } else {
-                        System.out.println("Has ganado esta ronda");
+                    } else if (sumaOrdenador > 11) {
+                        System.out.println("El ordenador se ha pasado. Has ganado");
                         porrasUsuario++;
-                    }
+                    }else if(sumaOrdenador > sumaUsuario){
+					System.out.println("PRINGADO!! el ordenador te ha ganado");
+
+					}else{
+					System.out.println("Has ganado esta tirada tu y sumas 1 porra");
+					porrasUsuario++;
+					}
                     break;
                 default:
                     System.out.println("Opción no válida. Elige 1 para tirar el dado o 2 para plantarte.");
@@ -94,7 +91,7 @@ caras con valores comprendidos entre 1 y 6. El objetivo del juego es sumar más 
 
         if (porrasUsuario >= 5) {
             System.out.println("¡Felicidades! Has ganado el juego.");
-        } else if (porrasOrdenador >= 5) {
+        } else if (porrasOrdenador >= porrasUsuario) {
             System.out.println("El ordenador te ha ganado. Mejor suerte la próxima vez.");
         }
     }
