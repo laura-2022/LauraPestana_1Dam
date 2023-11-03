@@ -14,7 +14,7 @@ public class Metodos17{
         char caracter = scanner.next().charAt(0);
 
         // Llamamos a la función rectangulo con los valores ingresados
-        System.out.println(rectangulo(ancho, alto, caracter);  
+        System.out.println(rectangulo(ancho, alto, caracter));  
 
         scanner.close();
     }
