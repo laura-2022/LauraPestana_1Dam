@@ -21,9 +21,16 @@ public class ExpresionesRegulares_n3 {
 		}
 
 		    private static int contarPalabras(String frase) {
-		        String[] palabras = frase.split(" ");
-		        return palabras.length;
-		    }
+		        int contador = 0;
+		        boolean palabra = false;
+
+		        for (int i = 0; i < frase.length(); i++) {
+		            if (frase.charAt(i) == ' ' || frase.charAt(i) == '\n' || frase.charAt(i) == '\t') {
+		                palabra = false;
+		            } else if (palabra) {
+		                contador++;
+		            }
+		        }
 
 		
 }
