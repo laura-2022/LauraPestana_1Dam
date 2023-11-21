@@ -7,11 +7,20 @@ public class ExpresionesRegulares_n3 {
 
 		        System.out.println("\nEjercicio 3:");
 		        System.out.print("Ingresa una frase: ");
-		        String frase3 = scanner.nextLine();
-		        System.out.println("Número de palabras: " + contarPalabras(frase3));
+		        String frase = scanner.nextLine();
+		        System.out.println("Número de palabras: " + contarPalabras(frase));
+
+		        
+
+
+		
+		
+
+		  
+
 		}
 
-		private static int contarPalabras(String frase) {
+		    private static int contarPalabras(String frase) {
 		        int contador = 0;
 		        boolean palabra = false;
 
@@ -25,5 +34,5 @@ public class ExpresionesRegulares_n3 {
 		        }
 				return contador;
 		    }
-		
 }
+		        
