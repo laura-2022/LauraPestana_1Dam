@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 import com.laurapestana.prg3.tema06.Ejercicio09;
 import com.laurapestana.prg3.tema06.Ejercicio10;
+import com.laurapestana.prg3.tema06.Ejercicio11;
 
 
 
@@ -10,8 +11,9 @@ public class Main {
   
 
     public static void main(String[] args) {
-        Ejercicio09 ejercicio09 = new Ejercicio09();
-        Ejercicio10 ejercicio10 = new Ejercicio10();
+       // Ejercicio09 ejercicio09 = new Ejercicio09();
+       // Ejercicio10 ejercicio10 = new Ejercicio10();
+        Ejercicio11 ejercicio11= new Ejercicio11();
 
     
       
