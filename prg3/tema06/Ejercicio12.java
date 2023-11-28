@@ -16,6 +16,7 @@ public class Ejercicio12 {
 		String resultadoDigitos = sustituirDigitos(cadenaOriginal);
 
 		// Imprimimos los resultados en la consola
+		System.out.println("Texto original: " + cadenaOriginal);
 		System.out.println("Texto sustituido: " + resultadoTexto);
 		System.out.println("Dígitos sustituidos: " + resultadoDigitos);
 	}
@@ -43,5 +44,4 @@ public class Ejercicio12 {
 		// Lo reemplazamos por el carácter "*"
 		return cadena.replaceAll("\\d+", "*");
 	}
-
 }
