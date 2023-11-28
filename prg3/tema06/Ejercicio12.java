@@ -21,14 +21,6 @@ public class Ejercicio12 {
 		System.out.println("Dígitos sustituidos: " + resultadoDigitos);
 	}
 
-	private static String mostrarNombreCompleto(String nombreCompleto) {
-		StringBuilder resultado = new StringBuilder();
-		resultado.append("Minúscula: ").append(nombreCompleto.toLowerCase()).append("\n");
-		resultado.append("Mayúscula: ").append(nombreCompleto.toUpperCase()).append("\n");
-		resultado.append("Longitud: ").append(nombreCompleto.length());
-		return resultado.toString();
-	}
-
 	// Método para sustituir todas las ocurrencias de "es" por "no por"
 	public static String sustituirTexto(String cadena) {
 		// Utilizamos el método replaceAll de la clase String
