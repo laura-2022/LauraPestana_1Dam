@@ -3,11 +3,21 @@ import java.util.Scanner;
 import java.util.Random;
 
 
-
-    public class Ejercicio22 {
+		/*
+ MENU QUE CREE ARRAY, VISUALICE ARRAY, VISUALICE EN POSICION PAR, Y DE LOS MULTIPLOS DE 3
+	*/
     
-        public Ejercicio22() {
-         
+
+    public class Ejercicio21 {
+    
+        public Ejercicio21() {
+           
+            /* Escribe un programa que permita introducir un array P de 10 elementos numéricos, visualizar su
+            contenido y crear otro array S con los elementos de P que sean mayores de 10 (cuando los
+            elementos sean <=10, se pondrá un -1). Visualizar después el contenido de S.*/
+           
+                    
+            
                             // Crear un array P de 10 elementos numéricos
                             Scanner scanner = new Scanner(System.in);
                             int[] P = new int[10];
